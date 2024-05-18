@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Add custom CSS to remove bullet points -->
+    <style>
+        ul, li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+
+        <iframe title="Live PI Working Group Visibility" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=064beb26-88b9-4957-9306-adbb4dea0434&autoAuth=true&ctid=f6da72b0-7977-4b09-bdfc-d38b2aa56d4c" frameborder="0" allowFullScreen="true"></iframe>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+        
+            <!-- Personal Information -->
+            <div class="form-group">
+                {{ form.name.label }}: {{ form.name(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label }}: {{ form.email(class="form-control") }}
+            </div>
+        
+            <!-- General Experience -->
+            <div class="form-group">
+                {{ form.overall_satisfaction.label }}: {{ form.overall_satisfaction(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.event_organization.label }}: {{ form.event_organization(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.met_expectations.label }}: {{ form.met_expectations(class="form-control") }}
+            </div>
+        
+            <!-- Team Experience -->
+            <div class="form-group">
+                {{ form.team_experience.label }}: {{ form.team_experience(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.collaboration_tools_effectiveness.label }}: {{ form.collaboration_tools_effectiveness(class="form-control") }}
+            </div>
+        
+            <!-- Project and Learning -->
+            <div class="form-group">
+                {{ form.project_satisfaction.label }}: {{ form.project_satisfaction(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.learning_experience.label }}: {{ form.learning_experience(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.challenge_level.label }}: {{ form.challenge_level(class="form-control") }}
+            </div>
+        
+            <!-- Networking and Community -->
+            <div class="form-group">
+                {{ form.networking_opportunities.label }}: {{ form.networking_opportunities(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.community_building.label }}: {{ form.community_building(class="form-control") }}
+            </div>
+        
+            <!-- Feedback and Suggestions -->
+            <div class="form-group">
+                {{ form.highlights.label }}: {{ form.highlights(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.areas_for_improvement.label }}: {{ form.areas_for_improvement(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.additional_comments.label }}: {{ form.additional_comments(class="form-control") }}
+            </div>
+        
+            <!-- Personal and Demographic Information -->
+            <div class="form-group">
+                {{ form.role.label }}: {{ form.role(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.experience_level.label }}: {{ form.experience_level(class="form-control") }}
+            </div>
+        
+            <!-- Follow-Up -->
+            <div class="form-group">
+                {{ form.future_participation.label }}: {{ form.future_participation(class="form-control") }}
+            </div>
+        
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+</body>
